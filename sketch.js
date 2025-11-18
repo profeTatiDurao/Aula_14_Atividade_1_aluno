@@ -60,12 +60,12 @@ function draw() {
   
   if(gameState === PLAY){
     //mover o solo
-    ground.velocityX = -4;
+   
     
   }
   else if(gameState === END){
     //parar o solo
-    ground.velocityX = 0;
+    
   
   }
   
@@ -119,7 +119,7 @@ function spawnObstacles(){
     obstacle.lifetime = 300;
    
    //adicione cada obstáculo ao grupo
-   obstaclesGroup.add(obstacle);
+  
  }
 }
 
@@ -143,7 +143,7 @@ function spawnClouds() {
     trex.depth = trex.depth + 1;
     
     //adicionando nuvem ao grupo
-   cloudsGroup.add(cloud);
+   
   }
   
 }
