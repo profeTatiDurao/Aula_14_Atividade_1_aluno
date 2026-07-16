@@ -45,8 +45,7 @@ function setup() {
   invisibleGround.visible = false;
   
   //crie Grupos de Obstáculos e Nuvens
-  obstaclesGroup = new Group();
-  cloudsGroup = new Group();
+  
   
   console.log("Hello" + 5);
   
@@ -69,7 +68,7 @@ function draw() {
   
   }
   
-  if(keyDown("space")&& trex.y >= 100) {
+  if(keyDown("space")&& trex.y >= 165) {
     trex.velocityY = -13;
   }
   
@@ -92,7 +91,7 @@ function draw() {
 
 function spawnObstacles(){
  if (frameCount % 60 === 0){
-   var obstacle = createSprite(400,165,10,40);
+   var obstacle = createSprite(600,165,10,40);
    obstacle.velocityX = -6;
 
    
@@ -116,7 +115,7 @@ function spawnObstacles(){
    
     //atribuir escala e vida útil ao obstáculo          
     obstacle.scale = 0.5;
-    obstacle.lifetime = 300;
+    obstacle.lifetime = 100;
    
    //adicione cada obstáculo ao grupo
   
@@ -136,7 +135,7 @@ function spawnClouds() {
     cloud.velocityX = -3;
     
      //atribuir vida útil à variável
-    cloud.lifetime = 134;
+    cloud.lifetime = 200;
     
     //ajustar a profundidade
     cloud.depth = trex.depth;
